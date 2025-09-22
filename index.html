@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الجملة الاسمية - المبتدأ والخبر</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap');
+        
+        body {
+            font-family: 'Amiri', serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .highlight-mubtada {
+            background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-weight: bold;
+            color: #2d3748;
+        }
+        
+        .highlight-khabar {
+            background: linear-gradient(120deg, #ffecd2 0%, #fcb69f 100%);
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-weight: bold;
+            color: #2d3748;
+        }
+        
+        .example-card {
+            transition: all 0.3s ease;
+        }
+        
+        .example-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .quiz-option {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .quiz-option:hover {
+            background-color: #e2e8f0;
+            transform: scale(1.02);
+        }
+        
+        .correct {
+            background-color: #c6f6d5 !important;
+            border-color: #38a169 !important;
+        }
+        
+        .incorrect {
+            background-color: #fed7d7 !important;
+            border-color: #e53e3e !important;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Header -->
+    <header class="bg-white shadow-lg">
+        <div class="max-w-4xl mx-auto px-6 py-8">
+            <h1 class="text-4xl font-bold text-center text-gray-800 mb-2">الجملة الاسمية</h1>
+            <p class="text-xl text-center text-gray-600">المبتدأ والخبر - اسمان مرفوعان دائماً</p>
+            <div class="flex justify-center mt-4">
+                <div class="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-6 py-8">
+        <!-- Introduction -->
+        <section class="bg-white rounded-2xl shadow-xl p-8 mb-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                <span class="text-4xl ml-3">📚</span>
+                تعريف الجملة الاسمية
+            </h2>
+            <div class="bg-blue-50 border-r-4 border-blue-500 p-6 rounded-lg">
+                <p class="text-lg leading-relaxed text-gray-700">
+                    الجملة الاسمية هي الجملة التي تبدأ باسم، وتتكون من ركنين أساسيين:
+                </p>
+                <div class="grid md:grid-cols-2 gap-6 mt-6">
+                    <div class="bg-white p-4 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-blue-600 mb-2">المبتدأ</h3>
+                        <p class="text-gray-700">الاسم المرفوع الذي تبدأ به الجملة</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-orange-600 mb-2">الخبر</h3>
+                        <p class="text-gray-700">الاسم المرفوع الذي يخبر عن المبتدأ</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Rule -->
+        <section class="bg-gradient-to-r from-green-400 to-blue-500 rounded-2xl shadow-xl p-8 mb-8 text-white">
+            <h2 class="text-3xl font-bold mb-6 flex items-center">
+                <span class="text-4xl ml-3">⚡</span>
+                القاعدة الذهبية
+            </h2>
+            <div class="bg-white bg-opacity-20 rounded-lg p-6">
+                <p class="text-2xl font-bold text-center">
+                    المبتدأ والخبر اسمان مرفوعان دائماً
+                </p>
+                <p class="text-lg text-center mt-4 opacity-90">
+                    علامة الرفع: الضمة الظاهرة
+                </p>
+            </div>
+        </section>
+
+        <!-- Simplified Explanation -->
+        <section class="bg-white rounded-2xl shadow-xl p-8 mb-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                <span class="text-4xl ml-3">🎓</span>
+                كيف نستخرج المبتدأ والخبر؟ - شرح مبسط
+            </h2>
+            <div class="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-lg border-2 border-blue-200 mb-8">
+                <h3 class="text-2xl font-bold text-blue-800 mb-4 text-center">خطوات بسيطة للطلاب 👨‍🎓</h3>
+                
+                <!-- Step by step example -->
+                <div class="bg-white p-6 rounded-lg shadow-md mb-6">
+                    <h4 class="text-xl font-bold text-gray-800 mb-4">مثال: "الطالبُ مجتهدٌ"</h4>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- Step 1: Find Mubtada -->
+                        <div class="bg-blue-50 p-4 rounded-lg border-2 border-blue-300">
+                            <h5 class="text-lg font-bold text-blue-700 mb-3">الخطوة الأولى: ابحث عن المبتدأ 🔍</h5>
+                            <div class="space-y-2 text-sm">
+                                <p><strong>السؤال:</strong> من أو ما الذي نتحدث عنه؟</p>
+                                <p><strong>الجواب:</strong> <span class="highlight-mubtada">الطالبُ</span></p>
+                                <p><strong>لماذا؟</strong> لأنه الاسم الأول في الجملة</p>
+                                <p><strong>علامته المميزة:</strong> يبدأ بـ "ال" التعريف</p>
+                                <p><strong>علامة الرفع:</strong> الضمة (ُ) في آخره</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Step 2: Find Khabar -->
+                        <div class="bg-orange-50 p-4 rounded-lg border-2 border-orange-300">
+                            <h5 class="text-lg font-bold text-orange-700 mb-3">الخطوة الثانية: ابحث عن الخبر 🔍</h5>
+                            <div class="space-y-2 text-sm">
+                                <p><strong>السؤال:</strong> الطالب... ما به؟</p>
+                                <p><strong>الجواب:</strong> <span class="highlight-khabar">مجتهدٌ</span></p>
+                                <p><strong>لماذا؟</strong> لأنه يخبرنا عن صفة الطالب</p>
+                                <p><strong>علامته المميزة:</strong> ينتهي بالتنوين (ٌ)</p>
+                                <p><strong>علامة الرفع:</strong> الضمة مع التنوين</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Interactive buttons -->
+                    <div class="mt-6 text-center">
+                        <button onclick="highlightParts()" class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-lg font-bold hover:from-blue-600 hover:to-purple-700 transition-all transform hover:scale-105">
+                            🎯 اضغط لترى المبتدأ والخبر بالألوان!
+                        </button>
+                    </div>
+                    
+                    <!-- Result display -->
+                    <div id="highlight-result" class="mt-4 p-4 bg-gray-50 rounded-lg hidden">
+                        <p class="text-2xl text-center mb-4">
+                            <span class="highlight-mubtada">الطالبُ</span> 
+                            <span class="highlight-khabar">مجتهدٌ</span>
+                        </p>
+                        <div class="grid md:grid-cols-2 gap-4 text-sm">
+                            <div class="text-center bg-blue-50 p-3 rounded">
+                                <p class="font-bold text-blue-600">المبتدأ: الطالبُ</p>
+                                <p>✅ يبدأ بـ "ال" التعريف</p>
+                                <p>✅ له ضمة في آخره</p>
+                            </div>
+                            <div class="text-center bg-orange-50 p-3 rounded">
+                                <p class="font-bold text-orange-600">الخبر: مجتهدٌ</p>
+                                <p>✅ ينتهي بالتنوين (ٌ)</p>
+                                <p>✅ الطالب... ما به؟ مجتهد</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quick tips -->
+                <div class="bg-yellow-50 p-4 rounded-lg border-2 border-yellow-300">
+                    <h4 class="text-lg font-bold text-yellow-800 mb-3">نصائح سريعة للطلاب 💡</h4>
+                    <div class="grid md:grid-cols-2 gap-4 text-sm">
+                        <div>
+                            <p class="font-bold text-blue-700">للمبتدأ:</p>
+                            <ul class="list-disc list-inside space-y-1 text-gray-700">
+                                <li>يأتي في بداية الجملة</li>
+                                <li>اسأل: من؟ أو ما؟</li>
+                                <li><strong>علامته المميزة:</strong> يبدأ بـ "ال" التعريف</li>
+                                <li>له ضمة في آخره (ُ)</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p class="font-bold text-orange-700">للخبر:</p>
+                            <ul class="list-disc list-inside space-y-1 text-gray-700">
+                                <li>يأتي بعد المبتدأ</li>
+                                <li>اسأل: (المبتدأ)... ما به؟</li>
+                                <li><strong>علامته المميزة:</strong> ينتهي بالتنوين (ٌ)</li>
+                                <li>له ضمة مع التنوين</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Examples -->
+        <section class="bg-white rounded-2xl shadow-xl p-8 mb-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                <span class="text-4xl ml-3">💡</span>
+                أمثلة تطبيقية مع الإعراب الكامل
+            </h2>
+            <div class="grid gap-6">
+                <div class="example-card bg-gradient-to-r from-pink-50 to-purple-50 p-6 rounded-lg border border-gray-200">
+                    <p class="text-2xl mb-4">
+                        <span class="highlight-mubtada">الطالبُ</span> 
+                        <span class="highlight-khabar">مجتهدٌ</span>
+                    </p>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h4 class="font-bold text-lg mb-3 text-gray-800">الإعراب الكامل:</h4>
+                        <div class="grid md:grid-cols-2 gap-4 text-sm">
+                            <div class="bg-white p-3 rounded border-r-4 border-blue-400">
+                                <strong>الطالبُ:</strong> مبتدأ مرفوع وعلامة رفعه الضمة الظاهرة على آخره
+                            </div>
+                            <div class="bg-white p-3 rounded border-r-4 border-orange-400">
+                                <strong>مجتهدٌ:</strong> خبر مرفوع وعلامة رفعه الضمة الظاهرة على آخره
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="example-card bg-gradient-to-r from-blue-50 to-cyan-50 p-6 rounded-lg border border-gray-200">
+                    <p class="text-2xl mb-4">
+                        <span class="highlight-mubtada">الكتابُ</span> 
+                        <span class="highlight-khabar">مفيدٌ</span>
+                    </p>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h4 class="font-bold text-lg mb-3 text-gray-800">الإعراب الكامل:</h4>
+                        <div class="grid md:grid-cols-2 gap-4 text-sm">
+                            <div class="bg-white p-3 rounded border-r-4 border-blue-400">
+                                <strong>الكتابُ:</strong> مبتدأ مرفوع وعلامة رفعه الضمة الظاهرة على آخره
+                            </div>
+                            <div class="bg-white p-3 rounded border-r-4 border-orange-400">
+                                <strong>مفيدٌ:</strong> خبر مرفوع وعلامة رفعه الضمة الظاهرة على آخره
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="example-card bg-gradient-to-r from-green-50 to-teal-50 p-6 rounded-lg border border-gray-200">
+                    <p class="text-2xl mb-4">
+                        <span class="highlight-mubtada">المعلمُ</span> 
+                        <span class="highlight-khabar">حاضرٌ</span>
+                    </p>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h4 class="font-bold text-lg mb-3 text-gray-800">الإعراب الكامل:</h4>
+                        <div class="grid md:grid-cols-2 gap-4 text-sm">
+                            <div class="bg-white p-3 rounded border-r-4 border-blue-400">
+                                <strong>المعلمُ:</strong> مبتدأ مرفوع وعلامة رفعه الضمة الظاهرة على آخره
+                            </div>
+                            <div class="bg-white p-3 rounded border-r-4 border-orange-400">
+                                <strong>حاضرٌ:</strong> خبر مرفوع وعلامة رفعه الضمة الظاهرة على آخره
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="example-card bg-gradient-to-r from-yellow-50 to-amber-50 p-6 rounded-lg border border-gray-200">
+                    <p class="text-2xl mb-4">
+                        <span class="highlight-mubtada">البيتُ</span> 
+                        <span class="highlight-khabar">نظيفٌ</span>
+                    </p>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h4 class="font-bold text-lg mb-3 text-gray-800">الإعراب الكامل:</h4>
+                        <div class="grid md:grid-cols-2 gap-4 text-sm">
+                            <div class="bg-white p-3 rounded border-r-4 border-blue-400">
+                                <strong>البيتُ:</strong> مبتدأ مرفوع وعلامة رفعه الضمة الظاهرة على آخره
+                            </div>
+                            <div class="bg-white p-3 rounded border-r-4 border-orange-400">
+                                <strong>نظيفٌ:</strong> خبر مرفوع وعلامة رفعه الضمة الظاهرة على آخره
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Signs of Raf' -->
+        <section class="bg-white rounded-2xl shadow-xl p-8 mb-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                <span class="text-4xl ml-3">🎯</span>
+                علامة الرفع
+            </h2>
+            <div class="flex justify-center">
+                <div class="bg-yellow-50 p-8 rounded-lg border-2 border-yellow-200 max-w-md">
+                    <h3 class="text-2xl font-bold text-yellow-800 mb-4 text-center">الضمة الظاهرة</h3>
+                    <ul class="space-y-3 text-gray-700 text-lg">
+                        <li class="flex items-center justify-center"><span class="text-green-500 ml-2">✓</span> الطالبُ مجتهدٌ</li>
+                        <li class="flex items-center justify-center"><span class="text-green-500 ml-2">✓</span> الكتابُ مفيدٌ</li>
+                        <li class="flex items-center justify-center"><span class="text-green-500 ml-2">✓</span> الحديقةُ جميلةٌ</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Quiz -->
+        <section class="bg-white rounded-2xl shadow-xl p-8 mb-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                <span class="text-4xl ml-3">🧠</span>
+                اختبر معلوماتك
+            </h2>
+            <div id="quiz-container">
+                <!-- Question 1 -->
+                <div class="quiz-question mb-8 p-6 bg-blue-50 rounded-lg" id="question1">
+                    <h3 class="text-lg font-bold mb-4 text-blue-800">السؤال الأول:</h3>
+                    <p class="text-xl mb-4 font-semibold">حدد المبتدأ والخبر في الجملة التالية:</p>
+                    <p class="text-2xl text-center bg-white p-4 rounded-lg mb-6 shadow-sm">"الحديقةُ جميلةٌ"</p>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="quiz-option bg-white p-4 rounded-lg border-2 border-gray-200" onclick="checkAnswer(this, false, 1)">
+                            <p><strong>المبتدأ:</strong> جميلةٌ</p>
+                            <p><strong>الخبر:</strong> الحديقةُ</p>
+                        </div>
+                        <div class="quiz-option bg-white p-4 rounded-lg border-2 border-gray-200" onclick="checkAnswer(this, true, 1)">
+                            <p><strong>المبتدأ:</strong> الحديقةُ</p>
+                            <p><strong>الخبر:</strong> جميلةٌ</p>
+                        </div>
+                    </div>
+                    <div id="quiz-result1" class="mt-4 text-center hidden">
+                        <p class="text-lg font-semibold"></p>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="quiz-question mb-8 p-6 bg-green-50 rounded-lg" id="question2">
+                    <h3 class="text-lg font-bold mb-4 text-green-800">السؤال الثاني:</h3>
+                    <p class="text-xl mb-4 font-semibold">لماذا سُميت الجملة الاسمية بهذا الاسم؟</p>
+                    <div class="grid gap-4">
+                        <div class="quiz-option bg-white p-4 rounded-lg border-2 border-gray-200" onclick="checkAnswer(this, false, 2)">
+                            <p>لأنها تحتوي على أسماء كثيرة</p>
+                        </div>
+                        <div class="quiz-option bg-white p-4 rounded-lg border-2 border-gray-200" onclick="checkAnswer(this, true, 2)">
+                            <p>لأنها تبدأ باسم</p>
+                        </div>
+                        <div class="quiz-option bg-white p-4 rounded-lg border-2 border-gray-200" onclick="checkAnswer(this, false, 2)">
+                            <p>لأنها تنتهي باسم</p>
+                        </div>
+                    </div>
+                    <div id="quiz-result2" class="mt-4 text-center hidden">
+                        <p class="text-lg font-semibold"></p>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="quiz-question mb-8 p-6 bg-purple-50 rounded-lg" id="question3">
+                    <h3 class="text-lg font-bold mb-4 text-purple-800">السؤال الثالث:</h3>
+                    <p class="text-xl mb-4 font-semibold">ما هو إعراب كلمة "طويلٌ" في الجملة: "الشجرُ طويلٌ"؟</p>
+                    <div class="grid gap-4">
+                        <div class="quiz-option bg-white p-4 rounded-lg border-2 border-gray-200" onclick="checkAnswer(this, false, 3)">
+                            <p>مبتدأ مرفوع وعلامة رفعه الضمة</p>
+                        </div>
+                        <div class="quiz-option bg-white p-4 rounded-lg border-2 border-gray-200" onclick="checkAnswer(this, true, 3)">
+                            <p>خبر مرفوع وعلامة رفعه الضمة الظاهرة على آخره</p>
+                        </div>
+                        <div class="quiz-option bg-white p-4 rounded-lg border-2 border-gray-200" onclick="checkAnswer(this, false, 3)">
+                            <p>فاعل مرفوع وعلامة رفعه الضمة</p>
+                        </div>
+                    </div>
+                    <div id="quiz-result3" class="mt-4 text-center hidden">
+                        <p class="text-lg font-semibold"></p>
+                    </div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="quiz-question mb-8 p-6 bg-orange-50 rounded-lg" id="question4">
+                    <h3 class="text-lg font-bold mb-4 text-orange-800">السؤال الرابع:</h3>
+                    <p class="text-xl mb-4 font-semibold">أي من الجمل التالية جملة اسمية صحيحة؟</p>
+                    <div class="grid gap-4">
+                        <div class="quiz-option bg-white p-4 rounded-lg border-2 border-gray-200" onclick="checkAnswer(this, false, 4)">
+                            <p>يلعبُ الطفلُ</p>
+                        </div>
+                        <div class="quiz-option bg-white p-4 rounded-lg border-2 border-gray-200" onclick="checkAnswer(this, true, 4)">
+                            <p>الطفلُ نشيطٌ</p>
+                        </div>
+                        <div class="quiz-option bg-white p-4 rounded-lg border-2 border-gray-200" onclick="checkAnswer(this, false, 4)">
+                            <p>اكتبْ الدرسَ</p>
+                        </div>
+                    </div>
+                    <div id="quiz-result4" class="mt-4 text-center hidden">
+                        <p class="text-lg font-semibold"></p>
+                    </div>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="quiz-question mb-8 p-6 bg-pink-50 rounded-lg" id="question5">
+                    <h3 class="text-lg font-bold mb-4 text-pink-800">السؤال الخامس:</h3>
+                    <p class="text-xl mb-4 font-semibold">ما وظيفة الخبر في الجملة الاسمية؟</p>
+                    <div class="grid gap-4">
+                        <div class="quiz-option bg-white p-4 rounded-lg border-2 border-gray-200" onclick="checkAnswer(this, false, 5)">
+                            <p>يبدأ الجملة</p>
+                        </div>
+                        <div class="quiz-option bg-white p-4 rounded-lg border-2 border-gray-200" onclick="checkAnswer(this, true, 5)">
+                            <p>يُكمل معنى المبتدأ ويجعل الجملة مفهومة</p>
+                        </div>
+                        <div class="quiz-option bg-white p-4 rounded-lg border-2 border-gray-200" onclick="checkAnswer(this, false, 5)">
+                            <p>يدل على الفعل</p>
+                        </div>
+                    </div>
+                    <div id="quiz-result5" class="mt-4 text-center hidden">
+                        <p class="text-lg font-semibold"></p>
+                    </div>
+                </div>
+
+                <!-- Score Display -->
+                <div id="final-score" class="text-center p-6 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-lg text-white hidden">
+                    <h3 class="text-2xl font-bold mb-2">نتيجتك النهائية</h3>
+                    <p class="text-xl" id="score-text"></p>
+                    <button onclick="resetQuiz()" class="mt-4 bg-white text-orange-600 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors">إعادة الاختبار</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Summary -->
+        <section class="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl shadow-xl p-8 text-white">
+            <h2 class="text-3xl font-bold mb-6 flex items-center">
+                <span class="text-4xl ml-3">📝</span>
+                ملخص الدرس
+            </h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white bg-opacity-20 p-4 rounded-lg">
+                    <h3 class="text-xl font-bold mb-2">التعريف</h3>
+                    <p>جملة تبدأ باسم وتتكون من مبتدأ وخبر</p>
+                </div>
+                <div class="bg-white bg-opacity-20 p-4 rounded-lg">
+                    <h3 class="text-xl font-bold mb-2">الإعراب</h3>
+                    <p>المبتدأ والخبر مرفوعان دائماً</p>
+                </div>
+                <div class="bg-white bg-opacity-20 p-4 rounded-lg">
+                    <h3 class="text-xl font-bold mb-2">علامة الرفع</h3>
+                    <p>الضمة الظاهرة</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <p class="text-lg">تم إعداد هذا الدرس بعناية</p>
+            <p class="text-lg">من قبل الاستاذ خليل البلوشي</p>
+            <p class="text-gray-400 mt-2">© 2025 - جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+
+    <script>
+        let score = 0;
+        let answeredQuestions = 0;
+        const totalQuestions = 5;
+        const answeredQuestionsSet = new Set();
+
+        function checkAnswer(element, isCorrect, questionNumber) {
+            // Prevent answering the same question multiple times
+            if (answeredQuestionsSet.has(questionNumber)) {
+                return;
+            }
+
+            const questionDiv = document.getElementById(`question${questionNumber}`);
+            const allOptionsInQuestion = questionDiv.querySelectorAll('.quiz-option');
+            const resultDiv = document.getElementById(`quiz-result${questionNumber}`);
+            
+            // Remove previous classes and disable all options in this question
+            allOptionsInQuestion.forEach(option => {
+                option.classList.remove('correct', 'incorrect');
+                option.style.pointerEvents = 'none';
+            });
+            
+            // Mark this question as answered
+            answeredQuestionsSet.add(questionNumber);
+            answeredQuestions++;
+
+            let resultMessage = '';
+            
+            if (isCorrect) {
+                score++;
+                element.classList.add('correct');
+                
+                // Different success messages for each question
+                switch(questionNumber) {
+                    case 1:
+                        resultMessage = '<p class="text-green-600 font-semibold">🎉 إجابة صحيحة! المبتدأ هو "الحديقةُ" والخبر هو "جميلةٌ" وكلاهما مرفوع بالضمة</p>';
+                        break;
+                    case 2:
+                        resultMessage = '<p class="text-green-600 font-semibold">🎉 ممتاز! الجملة الاسمية سُميت كذلك لأنها تبدأ باسم</p>';
+                        break;
+                    case 3:
+                        resultMessage = '<p class="text-green-600 font-semibold">🎉 صحيح! "طويلٌ" خبر مرفوع وعلامة رفعه الضمة الظاهرة</p>';
+                        break;
+                    case 4:
+                        resultMessage = '<p class="text-green-600 font-semibold">🎉 أحسنت! "الطفلُ نشيطٌ" جملة اسمية تبدأ باسم</p>';
+                        break;
+                    case 5:
+                        resultMessage = '<p class="text-green-600 font-semibold">🎉 رائع! الخبر يُكمل معنى المبتدأ ويجعل الجملة مفهومة</p>';
+                        break;
+                }
+            } else {
+                element.classList.add('incorrect');
+                // Show correct answer
+                allOptionsInQuestion.forEach(option => {
+                    if (option !== element) {
+                        option.classList.add('correct');
+                    }
+                });
+                
+                // Different error messages for each question
+                switch(questionNumber) {
+                    case 1:
+                        resultMessage = '<p class="text-red-600 font-semibold">❌ إجابة خاطئة. المبتدأ يأتي أولاً في الجملة والخبر يخبر عنه</p>';
+                        break;
+                    case 2:
+                        resultMessage = '<p class="text-red-600 font-semibold">❌ إجابة خاطئة. الجملة الاسمية سُميت كذلك لأنها تبدأ باسم</p>';
+                        break;
+                    case 3:
+                        resultMessage = '<p class="text-red-600 font-semibold">❌ إجابة خاطئة. "طويلٌ" هو الخبر وليس المبتدأ أو الفاعل</p>';
+                        break;
+                    case 4:
+                        resultMessage = '<p class="text-red-600 font-semibold">❌ إجابة خاطئة. الجملة الاسمية تبدأ باسم، أما الأخريان فهما جملة فعلية وجملة أمر</p>';
+                        break;
+                    case 5:
+                        resultMessage = '<p class="text-red-600 font-semibold">❌ إجابة خاطئة. الخبر يُكمل معنى المبتدأ، أما المبتدأ فهو الذي يبدأ الجملة</p>';
+                        break;
+                }
+            }
+            
+            resultDiv.innerHTML = resultMessage;
+            resultDiv.classList.remove('hidden');
+            
+            // Check if all questions are answered
+            if (answeredQuestions === totalQuestions) {
+                setTimeout(() => {
+                    showFinalScore();
+                }, 2000);
+            }
+        }
+
+        function showFinalScore() {
+            const finalScoreDiv = document.getElementById('final-score');
+            const scoreText = document.getElementById('score-text');
+            
+            let message = '';
+            let emoji = '';
+            
+            if (score === totalQuestions) {
+                message = `ممتاز! حصلت على ${score} من ${totalQuestions} - أتقنت الدرس بشكل رائع! 🏆`;
+                emoji = '🌟';
+            } else if (score >= 4) {
+                message = `جيد جداً! حصلت على ${score} من ${totalQuestions} - أداء ممتاز! 👏`;
+                emoji = '🎉';
+            } else if (score >= 3) {
+                message = `جيد! حصلت على ${score} من ${totalQuestions} - راجع الدرس مرة أخرى 📚`;
+                emoji = '👍';
+            } else {
+                message = `حصلت على ${score} من ${totalQuestions} - ننصحك بمراجعة الدرس والمحاولة مرة أخرى 💪`;
+                emoji = '📖';
+            }
+            
+            scoreText.innerHTML = `${emoji} ${message}`;
+            finalScoreDiv.classList.remove('hidden');
+            
+            // Scroll to score
+            finalScoreDiv.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function resetQuiz() {
+            // Reset variables
+            score = 0;
+            answeredQuestions = 0;
+            answeredQuestionsSet.clear();
+            
+            // Reset all questions
+            for (let i = 1; i <= totalQuestions; i++) {
+                const questionDiv = document.getElementById(`question${i}`);
+                const allOptionsInQuestion = questionDiv.querySelectorAll('.quiz-option');
+                const resultDiv = document.getElementById(`quiz-result${i}`);
+                
+                allOptionsInQuestion.forEach(option => {
+                    option.classList.remove('correct', 'incorrect');
+                    option.style.pointerEvents = 'auto';
+                });
+                
+                resultDiv.classList.add('hidden');
+            }
+            
+            // Hide final score
+            document.getElementById('final-score').classList.add('hidden');
+            
+            // Scroll to first question
+            document.getElementById('question1').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function highlightParts() {
+            const resultDiv = document.getElementById('highlight-result');
+            const button = event.target;
+            
+            if (resultDiv.classList.contains('hidden')) {
+                resultDiv.classList.remove('hidden');
+                button.textContent = '🎯 إخفاء الألوان';
+                button.classList.add('bg-gradient-to-r', 'from-green-500', 'to-teal-600');
+                button.classList.remove('from-blue-500', 'to-purple-600');
+                
+                // Add animation effect
+                resultDiv.style.animation = 'fadeIn 0.5s ease-in';
+            } else {
+                resultDiv.classList.add('hidden');
+                button.textContent = '🎯 اضغط لترى المبتدأ والخبر بالألوان!';
+                button.classList.remove('from-green-500', 'to-teal-600');
+                button.classList.add('from-blue-500', 'to-purple-600');
+            }
+        }
+
+        // Add smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'98330c88c01944ab',t:'MTc1ODU1NzE4MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
